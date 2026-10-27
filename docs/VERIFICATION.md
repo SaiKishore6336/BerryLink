@@ -642,3 +642,20 @@ HTTP request shape but cannot confirm the real service or quota.
 - Tests: regex coverage (filenames yes, app names/text-file questions no),
   count-2 parse, and a live-server open-file ask proving the Allow dialog
   fires before any execution. **80 passed** (77 → 80).
+
+### Release signing (2026-10-27)
+
+- Private keystore created in-project: `android/release-keystore.jks`
+  (alias `berrylink`, 2048-bit RSA, 10000-day validity, owner Sai Kishore),
+  secrets in `android/keystore.properties`. Both are gitignored
+  (`*.jks` + `keystore.properties` rules) and verified untracked.
+- `android/app/build.gradle.kts` wires a release signingConfig from the
+  properties file only when it exists; fresh clones build unsigned-safe.
+- `scripts/build-release.sh`: unit tests + `assembleRelease`, output
+  `dist/app-release.apk` (+ `.sha256`), and an `apksigner verify
+  --print-certs` printout of the signing certificate.
+- GitHub release policy: exactly one APK per release page
+  (`BerryLink-<version>.apk`); the debug asset was removed, replaced by the
+  release-signed build under the same tag `v0.1.0` — versions replace, never
+  stack. Phones switching debug → release must uninstall the debug build
+  first (different signing key).

@@ -52,5 +52,8 @@ per-device tokens.
 - Desktop: 80 tests passing (protocol, pairing incl. codeless, tools,
   gateways incl. action parsing, live-server ask flows).
 - Android: unit tests pass and the debug APK builds in one command via
-  `scripts/build-android.sh`; the shipped APK in `dist/` is that build
-  (debug-signed, sha256 published on the release).
+  `scripts/build-android.sh`; the dist APK is that same flow's build. A
+  release-signed APK builds with `scripts/build-release.sh` using the
+  maintainer's private local keystore (gitignored, in-project); the GitHub
+  release ships exactly one APK — `BerryLink-<version>.apk` — and version
+  bumps replace it in place on the same release page.

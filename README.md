@@ -59,17 +59,19 @@ Android phone (face, mic, TTS) ── LAN/Wi-Fi ──► Kali desktop gateway (
 
 ## Install
 
-- **APK (Android 8.0+, 10.5 MB, debug-signed testing build):** download the
-  latest release from https://github.com/SaiKishore6336/BerryLink/releases/latest
+- **APK (Android 8.0+, ~10.5 MB, release-signed):** download the latest
+  release from https://github.com/SaiKishore6336/BerryLink/releases/latest
   and install it:
 
   ```bash
-  adb install BerryLink-0.1.0-debug.apk
+  adb install BerryLink-0.1.0.apk
   ```
 
-  Package id: `app.berrylink.companion` (single build variant — the debug build
-  IS the release; see project structure below). The exact file checksum is in
-  each release's `SHA256SUMS.txt`.
+  If a prior debug build is installed, uninstall it first — the release is
+  signed with the maintainer's private key, which is different from the debug
+  key. Package id: `app.berrylink.companion`; the checksum is in each
+  release's `SHA256SUMS.txt`. One APK lives on each release page; versions
+  replace it rather than stacking assets.
 
 - **Desktop (Kali Linux or another X11 desktop, Python 3.10+):**
 
@@ -109,11 +111,15 @@ Pair once, then just talk or type:
 
 ## Signing
 
-The published APK is **debug-key signed** and is labeled a testing build in
-the release notes. Only debug builds currently exist; there is no release
-variant. Use a private keystore before distributing outside development, and
-keep the app package id and release/debug signing separate if/when that
-happens.
+Release APKs are signed with the maintainer's private keystore kept inside
+the project folder: `android/release-keystore.jks` (alias `berrylink`) with
+its secrets in `android/keystore.properties`. Both are gitignored and exist
+only on the signing machine — back them up privately, and note that losing
+the keystore means future updates can never install over an installed app.
+`scripts/build-release.sh` builds the signed release APK; the signing hook
+turns itself off when the properties file is absent, so a fresh clone always
+builds. `scripts/build-android.sh` still produces a debug-key signed testing
+build for local use; those never ship to GitHub.
 
 ## Limit and notes
 
@@ -166,5 +172,5 @@ The OFL font notices additionally ship inside the APK at
 
 [docs/VERIFICATION.md](docs/VERIFICATION.md) documents what was tested at
 every working round: pairing (six-digit and codeless), ask flows, action
-Allow-gating, screenshot/OCR behavior, and the current tally of desktop tests
-(80 passing).
+Allow-gating, screenshot/OCR behavior, the current tally of desktop tests
+(80 passing), and release signing.
