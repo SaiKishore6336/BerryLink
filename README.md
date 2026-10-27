@@ -1,7 +1,7 @@
 # BerryLink
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/SaiKishore6336/berrylink.svg)](https://github.com/SaiKishore6336/berrylink/releases/latest)
+[![Release](https://img.shields.io/github/v/release/SaiKishore6336/BerryLink.svg)](https://github.com/SaiKishore6336/BerryLink/releases/latest)
 [![Platform: Linux + Android](https://img.shields.io/badge/platform-Linux%20%7C%20Android-blueviolet.svg)](#install)
 [![Python](https://img.shields.io/badge/desktop-Python%20%2B%20Qt-blue.svg)](desktop/berrylink)
 [![Kotlin](https://img.shields.io/badge/android-Kotlin%20%2B%20Compose-green.svg)](android/app)
@@ -60,7 +60,7 @@ Android phone (face, mic, TTS) ── LAN/Wi-Fi ──► Kali desktop gateway (
 ## Install
 
 - **APK (Android 8.0+, 10.5 MB, debug-signed testing build):** download the
-  latest release from https://github.com/SaiKishore6336/berrylink/releases/latest
+  latest release from https://github.com/SaiKishore6336/BerryLink/releases/latest
   and install it:
 
   ```bash
