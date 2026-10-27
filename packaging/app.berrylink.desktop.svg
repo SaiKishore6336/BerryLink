@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="berry" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9bcff"/>
+      <stop offset=".55" stop-color="#586ff0"/>
+      <stop offset="1" stop-color="#293291"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#090c18"/>
+  <path d="M64 34c-21 0-35 17-34 37 1 21 15 33 34 33s33-12 34-33c1-20-13-37-34-37Z" fill="url(#berry)" stroke="#1c1f66" stroke-width="5"/>
+  <path d="M64 34c-4-9-15-15-26-12 7 7 15 12 26 12Z" fill="#55dfae" stroke="#1b6453" stroke-width="3"/>
+  <path d="M64 34c3-8 12-14 22-12-6 7-13 12-22 12Z" fill="#55dfae" stroke="#1b6453" stroke-width="3"/>
+  <ellipse cx="50" cy="65" rx="11" ry="14" fill="#f9fbff" stroke="#17225b" stroke-width="3"/>
+  <ellipse cx="78" cy="65" rx="11" ry="14" fill="#f9fbff" stroke="#17225b" stroke-width="3"/>
+  <ellipse cx="52" cy="67" rx="5" ry="7" fill="#121a45"/>
+  <ellipse cx="80" cy="67" rx="5" ry="7" fill="#121a45"/>
+  <circle cx="53.5" cy="64" r="2" fill="#ffffff"/>
+  <circle cx="81.5" cy="64" r="2" fill="#ffffff"/>
+  <path d="M47 78c8-5 26-5 34 0-4 3-8 5-17 5s-13-2-17-5Z" fill="#1c1f66"/>
+  <circle cx="37" cy="80" r="6" fill="#f28fb3" opacity=".65"/>
+  <circle cx="91" cy="80" r="6" fill="#f28fb3" opacity=".65"/>
+</svg>

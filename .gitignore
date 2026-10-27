@@ -1,0 +1,44 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# Secrets and local config (never commit; keys live outside the repo in
+# ~/.config/berrylink — config.json for settings, secrets.json 0600 for keys)
+.env
+.env.*
+local.properties
+secrets.json
+secrets.*
+*.jks
+*.keystore
+keystore.properties
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build output and artifacts (release binaries ship as GitHub release assets)
+build/
+dist/
+out/
+.cache/
+coverage/
+*.log
+
+# Android
+.gradle/
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/
+app/build/

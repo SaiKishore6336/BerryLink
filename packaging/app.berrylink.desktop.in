@@ -1,0 +1,16 @@
+# A desktop launcher is not a service definition.  It keeps Main in the
+# foreground so a user can always see and close the gateway.
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BerryLink
+GenericName=Phone desktop companion
+Comment=Point around this desktop from the BerryLink Android app
+Exec="@ROOT@/scripts/run-desktop.sh"
+Path=@ROOT@
+Icon=app.berrylink.desktop
+Terminal=false
+Categories=Utility;
+Keywords=berrylink;phone;companion;cursor;
+StartupNotify=true
+StartupWMClass=BerryLink

@@ -1,0 +1,6 @@
+PyQt6>=6.7,<7
+Pillow>=10,<13
+websockets>=13,<17
+zeroconf>=0.132,<1
+cryptography>=42,<50
+pynput>=1.7.7,<2
